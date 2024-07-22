@@ -1,0 +1,7 @@
+{
+    "host": "FTPSERV",
+    "port": 21,
+    "user": "FTPUSER",
+    "password": "FTPPASS",
+    "secure": false
+}
