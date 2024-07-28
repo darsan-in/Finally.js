@@ -1,7 +1,7 @@
 {
-    "host": "FTPSERV",
+    "host": "FTPSERV_ENV_VAR",
     "port": 21,
-    "user": "FTPUSER",
-    "password": "FTPPASS",
+    "user": "FTPUSER_ENV_VAR",
+    "password": "FTPPASS_ENV_VAR",
     "secure": false
 }

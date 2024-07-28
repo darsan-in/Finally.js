@@ -137,10 +137,10 @@ export async function vehicle({
   remoteBasePath = "/",
   ignorePattern = [],
   ftpVerbose = false,
-  host = configurations.host,
+  host = process.env[configurations.host] ?? "",
   port = configurations.port,
-  user = configurations.user,
-  password = configurations.password,
+  user = process.env[configurations.user] ?? "",
+  password = process.env[configurations.password] ?? "",
   secure = configurations.secure,
 }: {
   basePath: string;

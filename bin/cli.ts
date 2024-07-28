@@ -16,13 +16,21 @@ program
   )
   .option("-i, --ignorePattern <patterns...>", "Patterns to ignore", [])
   .option("-n, --ftpVerbose", "Enable FTP verbose mode", false)
-  .option("-h, --host <host>", "FTP server host", configurations.host)
+  .option(
+    "-h, --host <host>",
+    "FTP server host",
+    process.env[configurations.host] ?? ""
+  )
   .option("-p, --port <port>", "FTP server port", `${configurations.port}`)
-  .option("-u, --user <user>", "FTP server username", configurations.user)
+  .option(
+    "-u, --user <user>",
+    "FTP server username",
+    process.env[configurations.user] ?? ""
+  )
   .option(
     "-a, --password <password>",
     "FTP server password",
-    configurations.password
+    process.env[configurations.password] ?? ""
   )
   .option("--secure", "Enable secure FTP connection", configurations.secure)
   .action(async (options) => {
