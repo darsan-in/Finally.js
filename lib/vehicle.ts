@@ -45,13 +45,13 @@ async function _processFiles(
   const promises: (() => Promise<void>)[] = [];
 
   productionFiles.forEach((sourcePath: string) => {
-    //mk dir if not exist
-    makeDirf(dirname(sourcePath));
-
     const destinationPath: string = join(
       tempDir,
       relative(process.cwd(), sourcePath)
     );
+
+    //mk dir if not exist
+    makeDirf(dirname(destinationPath));
 
     promises.push((): Promise<void> => {
       return copyFile(sourcePath, destinationPath);
@@ -61,6 +61,16 @@ async function _processFiles(
   await batchProcess(promises, 35);
 
   return productionFiles.length;
+}
+
+function _removeStale() {
+  //remove tempfiles
+  rm(tempDir, { force: true, recursive: true }).catch(console.warn);
+}
+
+function _errorHandler(error: Error, callback: (error: Error) => void): void {
+  _removeStale();
+  callback(error);
 }
 
 function _upload(
@@ -108,14 +118,17 @@ function _upload(
             //closing session
             client.close();
 
-            //remove tempfiles
-            rm(tempDir, { force: true, recursive: true }).catch(console.warn);
+            _removeStale();
 
             _complete(resolve, startTime, progress);
           })
-          .catch(reject);
+          .catch((err: Error) => {
+            _errorHandler(err, reject);
+          });
       })
-      .catch(reject);
+      .catch((err: Error) => {
+        _errorHandler(err, reject);
+      });
   }); //promise
 }
 
