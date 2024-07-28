@@ -1,6 +1,6 @@
-# Finally
+# Finally.js
 
-**Finally** is a simple and efficient Node.js tool for deploying website files to an FTP server. It collects source files from a specified directory and pushes them to an FTP server using environment variable-based authentication for secure credential management. Additionally, it can be seamlessly integrated with GitHub Actions for automated deployment workflows.
+**Finally.js** is a simple and efficient Node.js tool for deploying website files to an FTP server. It collects source files from a specified directory and pushes them to an FTP server using environment variable-based authentication for secure credential management. Additionally, it can be seamlessly integrated with GitHub Actions for automated deployment workflows.
 
 ## Features
 
@@ -24,10 +24,10 @@
 
 ### Installation
 
-1. Add finally to your project:
+1. Add finally.js to your project:
 
    ```bash
-   npm install finally
+   npm install finally.js
    ```
 
 ### Configuration (optional⚠️)
@@ -68,7 +68,7 @@
 
 ### Advanced Usage
 
-To use Finally with additional options and custom configurations, you can pass more options through the CLI:
+To use Finally.js with additional options and custom configurations, you can pass more options through the CLI:
 
 ```bash
 npx finally -b dist -r /public_html -i test/** devfiles/** --ftpVerbose -h ftp.example.com -p 21 -u exampleuser --password examplepass --secure
@@ -76,7 +76,7 @@ npx finally -b dist -r /public_html -i test/** devfiles/** --ftpVerbose -h ftp.e
 
 ### Example
 
-Here’s an example of how to use Finally to deploy files:
+Here’s an example of how to use Finally.js to deploy files:
 
 1. **Setup a Sample Project**: Create a sample project directory and add some files to a `dist` folder.
 
@@ -107,7 +107,7 @@ Here’s an example of how to use Finally to deploy files:
 
 ### GitHub Actions Integration
 
-To use Finally with GitHub Actions for continuous deployment, you can add the following workflow file to your repository:
+To use Finally.js with GitHub Actions for continuous deployment, you can add the following workflow file to your repository:
 
 ```yaml
 name: FTP Deployment
@@ -131,7 +131,7 @@ jobs:
           node-version: "22"
 
       - name: Install Finally
-        run: npm install finally
+        run: npm install finally.js
 
       - name: Deploy to FTP
         env:
@@ -149,7 +149,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Contributing
 
-We welcome contributions to Finally! If you find a bug or have a feature request, please create an issue or submit a pull request on [GitHub](https://github.com/iamspdarsan/finally).
+We welcome contributions to Finally.js! If you find a bug or have a feature request, please create an issue or submit a pull request on [GitHub](https://github.com/iamspdarsan/finally.js).
 
 ### Contact
 

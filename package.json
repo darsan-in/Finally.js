@@ -1,8 +1,8 @@
 {
-	"name": "finally",
-	"displayName": "Finally",
+	"name": "finally.js",
+	"displayName": "Finally.js",
 	"version": "1.0.0",
-	"description": "Finally is a simple and efficient Node.js tool for deploying website files to an FTP server. It collects source files from a specified directory and pushes them to an FTP server using environment variable-based authentication for secure credential management.",
+	"description": "Finally.js is a simple and efficient Node.js tool for deploying website files to an FTP server. It collects source files from a specified directory and pushes them to an FTP server using environment variable-based authentication for secure credential management. Additionally, it can be seamlessly integrated with GitHub Actions for automated deployment workflows.",
 	"main": "./dist/finally.js",
 	"types": "./dist/types/finally.d.ts",
 	"exports": {
@@ -18,15 +18,15 @@
 		"finally": "./dist/bin/cli.js"
 	},
 	"repository": {
-		"url": "https://github.com/iamspdarsan/finally"
+		"url": "https://github.com/iamspdarsan/finally.js"
 	},
 	"bugs": {
-		"url": "https://github.com/iamspdarsan/finally/issues"
+		"url": "https://github.com/iamspdarsan/finally.js/issues"
 	},
-	"homepage": "https://github.com/iamspdarsan/finally",
-	"author": "DARSAN <darsan@cresteem.com>",
+	"homepage": "https://github.com/iamspdarsan/finally.js#readme",
+	"author": "DARSAN <hello@darsan.in>",
 	"maintainers": [
-		"DARSAN <darsan@cresteem.com>"
+		"DARSAN <hello@darsan.in>"
 	],
 	"license": "MIT",
 	"private": false,
@@ -37,7 +37,7 @@
 		"test": "jest",
 		"build": "cls && rimraf dist && tsc -p tsconfig.json && ncp ./finally.c.json ./dist/finally.c.json",
 		"clean": "cls && rimraf dist",
-		"deploy": "yarn build && npm publish --access public && git push"
+		"deploy": "yarn build && npm publish && git push"
 	},
 	"keywords": [
 		"Node.js",
@@ -57,8 +57,8 @@
 		"Web deployment"
 	],
 	"dependencies": {
-		"basic-ftp": "^5.0.5",
-		"cli-progress": "^3.12.0",
+		"basic-ftp": "5.0.5",
+		"cli-progress": "3.12.0",
 		"commander": "12.1.0",
 		"glob": "11.0.0"
 	},
