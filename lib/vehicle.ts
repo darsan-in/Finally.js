@@ -4,7 +4,10 @@ import { copyFile, rm } from "fs/promises";
 import { globSync } from "glob";
 import { dirname, join, relative } from "path";
 import configurations from "../configLoader";
+import { ConfigurationOptions } from "./options";
 import { batchProcess, makeDirf } from "./utils";
+
+const tempDir: string = join(process.cwd(), ".finally");
 
 /* vehicle completion funtion */
 function _complete(
@@ -20,15 +23,10 @@ function _complete(
   resolve();
 }
 
-export async function vehicle(
+async function _processFiles(
   basePath: string,
-  remoteBasePath: string = "/",
-  ignorePattern: string[] = [],
-  ftpVerbose: boolean = false
-): Promise<void> {
-  //process starting time
-  const startTime: Date = new Date();
-
+  ignorePattern: string[]
+): Promise<number> {
   /* default ignore pattern */
   ignorePattern =
     ignorePattern.length !== 0
@@ -42,8 +40,6 @@ export async function vehicle(
     nodir: true,
     dot: true,
   });
-
-  const tempDir: string = join(process.cwd(), ".finally");
 
   //copy file to tempdir
   const promises: (() => Promise<void>)[] = [];
@@ -64,6 +60,16 @@ export async function vehicle(
 
   await batchProcess(promises, 35);
 
+  return productionFiles.length;
+}
+
+function _upload(
+  remoteBasePath: string,
+  configurations: ConfigurationOptions,
+  numberOfFiles: number,
+  startTime: Date,
+  ftpVerbose: boolean
+): Promise<void> {
   return new Promise((resolve, reject) => {
     //ftp client
     const client = new Client();
@@ -92,7 +98,7 @@ export async function vehicle(
         console.log("FTP Access Granted");
 
         //start the progress
-        progress.start(productionFiles.length, 0);
+        progress.start(numberOfFiles, 0);
 
         console.log("Uploading Files");
         //uploading
@@ -111,4 +117,42 @@ export async function vehicle(
       })
       .catch(reject);
   }); //promise
+}
+
+export async function vehicle({
+  basePath,
+  remoteBasePath = "/",
+  ignorePattern = [],
+  ftpVerbose = false,
+  host = configurations.host,
+  port = configurations.port,
+  user = configurations.user,
+  password = configurations.password,
+  secure = configurations.secure,
+}: {
+  basePath: string;
+  remoteBasePath: string;
+  ignorePattern: string[];
+  ftpVerbose: boolean;
+} & ConfigurationOptions): Promise<void> {
+  //process starting time
+  const startTime: Date = new Date();
+
+  const numberOfFiles: number = await _processFiles(basePath, ignorePattern);
+
+  const localConfig: ConfigurationOptions = {
+    host: host,
+    port: port,
+    user: user,
+    password: password,
+    secure: secure,
+  };
+
+  return _upload(
+    remoteBasePath,
+    localConfig,
+    numberOfFiles,
+    startTime,
+    ftpVerbose
+  );
 }

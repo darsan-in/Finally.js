@@ -37,7 +37,7 @@
 		"test": "jest",
 		"build": "cls && rimraf dist && tsc -p tsconfig.json && ncp ./finally.c.json ./dist/finally.c.json",
 		"clean": "cls && rimraf dist",
-		"deploy": "yarn build && yarn publish --access public && git push"
+		"deploy": "yarn build && npm publish --access public && git push"
 	},
 	"keywords": [
 		"Node.js",
