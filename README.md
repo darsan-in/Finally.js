@@ -1,161 +1,287 @@
-# Finally.js
+<div align="center">
 
-**Finally.js** is a simple and efficient Node.js tool for deploying website files to an FTP server. It collects source files from a specified directory and pushes them to an FTP server using environment variable-based authentication for secure credential management. Additionally, it can be seamlessly integrated with GitHub Actions for automated deployment workflows.
+# [Title] - [short desc]
 
-## Features
+<p id="intro">[This is a placeholder paragraph. Here some introductory text or describe the content that will eventually go in this section. This text is meant to give a sense of how the final content will look in the design.]
+</p>
 
-- **Simple Deployment:** Easily deploy website files to your FTP server.
-- **Environment Variable Authentication:** Securely manage FTP credentials through environment variables.
-- **Automated File Transfer:** Automatically push files from the local directory to the FTP server.
-- **Progress Tracking:** Track upload progress with a visual progress bar.
-- **Error Handling:** Robust error handling and cleanup of temporary files.
-- **GitHub Actions Integration:** Use with GitHub Actions for continuous deployment.
+### Supported Platforms
 
-## Best Use Cases
+[![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)]()
+[![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)]()
+[![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)]()
+[![Node JS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)]()
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)]()
 
-- GitHub Actions integration for continuous deployment.
-- Local deployment for development and testing purposes.
+---
 
-## Getting Started
+[uname-holder/reponame-holder] [npm-name-holder] [wf-holder] - for test&build
 
-### Prerequisites
+<p>
 
-- Node.js installed on your local machine or environment.
+<span>
+  <a href="https://github.com/uname-holder/reponame-holder/commits/main">
+    <img src="https://img.shields.io/github/last-commit/uname-holder/reponame-holder?display_timestamp=committer&style=for-the-badge&label=Updated%20On" alt="GitHub last commit"/>
+  </a>
+</span>
 
-### Installation
+<span>
+  <a href="">
+    <img src="https://img.shields.io/github/commit-activity/m/uname-holder/reponame-holder?style=for-the-badge&label=Commit%20Activity" alt="GitHub commit activity"/>
+  </a>
+</span>
 
-1. Add finally.js to your project:
+</p>
 
-   ```bash
-   npm install finally.js
-   ```
+<p>
 
-### Configuration (optional⚠️)
+<span>
+  <a href="https://github.com/uname-holder/reponame-holder/actions/workflows/wf-holder.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/uname-holder/reponame-holder/wf-holder.yml?style=for-the-badge&label=Build%20Status" alt="GitHub Actions Build Status"/>
+  </a>
+</span>
 
-1. Create a `finally.c.json` file in the root of your project with the following content:
+<span>
+  <a href="https://github.com/uname-holder/reponame-holder/actions/workflows/wf-holder.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/uname-holder/reponame-holder/wf-holder.yml?style=for-the-badge&label=Test%20Status" alt="GitHub Actions Test Status"/>
+  </a>
+</span>
 
-   ```json
-   {
-     "host": "FTPSERV_ENV_VAR",
-     "port": 21,
-     "user": "FTPUSER_ENV_VAR",
-     "password": "FTPPASS_ENV_VAR",
-     "secure": false
-   }
-   ```
+</p>
 
-### Usage
+---
 
-1. Run the deployment script:
+<p>
 
-   ```bash
-   finally -b dist -r /public_html
-   ```
+<span>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/github/license/uname-holder/reponame-holder?style=for-the-badge&label=License" alt="GitHub License"/>
+  </a>
+</span>
 
-2. The script will connect to the FTP server and upload all files from the specified local directory to the target directory on the server.
+<span>
+  <a href="https://github.com/uname-holder/reponame-holder/releases">
+    <img src="https://img.shields.io/github/v/release/uname-holder/reponame-holder?include_prereleases&sort=date&display_name=tag&style=for-the-badge&label=Latest%20Version" alt="GitHub Release"/>
+  </a>
+</span>
 
-### CLI Options
+</p>
 
-- `-b, --basePath <path>`: Base path of the files to upload (required)
-- `-r, --remoteBasePath <path>`: Remote base path on the FTP server (required)
-- `-i, --ignorePattern <patterns...>`: Patterns to ignore (optional, default: ["./node_modules/**", ".git/**"])
-- `-n, --ftpVerbose`: Enable FTP verbose mode (optional)
-- `-h, --host <host>`: FTP server host (default: from configured environment variable)
-- `-p, --port <port>`: FTP server port (default: from configuration)
-- `-u, --user <user>`: FTP server username (default: from configured environment variable)
-- `-a, --password <password>`: FTP server password (default: from configured environment variable)
-- `--secure`: Enable secure FTP connection (default: from configuration)
+<p>
 
-### Advanced Usage
+<span>
+  <a href="https://www.codefactor.io/repository/github/uname-holder/reponame-holder/issues/main">
+    <img src="https://img.shields.io/codefactor/grade/github/uname-holder/reponame-holder?style=for-the-badge&label=Code%20Quality%20Grade" alt="CodeFactor Grade"/>
+  </a>
+</span>
 
-To use Finally.js with additional options and custom configurations, you can pass more options through the CLI:
+</p>
+
+---
+
+<p>
+
+<span>
+  <a href="">
+    <img src="https://img.shields.io/npm/d18m/npm-name-holder?style=for-the-badge&label=Downloads%20On%20NPM" alt="NPM Downloads"/>
+  </a>
+</span>
+
+<span>
+  <a href="">
+    <img src="https://img.shields.io/github/stars/uname-holder/reponame-holder?style=for-the-badge&label=Stars" alt="GitHub Repo stars"/>
+  </a>
+</span>
+
+</p>
+
+---
+
+<p>
+
+<span>
+  <a href="https://github.com/sponsors/darsan-in">
+    <img src="https://img.shields.io/github/sponsors/darsan-in?style=for-the-badge&label=Generous%20Sponsors" alt="GitHub Sponsors"/>
+  </a>
+</span>
+
+</p>
+
+---
+
+</div>
+
+## Table of Contents 📝
+
+- [Features and Benefits](#features-and-benefits-)
+- [Use Cases](#use-cases-)
+- [Friendly request to users](#-friendly-request-to-users)
+
+- [Installation - Step-by-Step Guide](#installation---step-by-step-guide-)
+- [Usage](#usage)
+- [In-Action](#in-action-)
+
+- [License](#license-%EF%B8%8F)
+- [Contributing to Our Project](#contributing-to-our-project-)
+- [Website](#website-)
+
+- [Contact Information](#contact-information)
+- [Credits](#credits-)
+
+## Features and Benefits ✨
+
+- [f1]
+- [f2]
+- [fn]
+
+## Use Cases ✅
+
+- [usecase 1]
+- [use case 2]
+
+---
+
+### 🙏🏻 Friendly Request to Users
+
+Every star on this repository is a sign of encouragement, a vote of confidence, and a reminder that our work is making a difference. If this project has brought value to you, even in the smallest way, **please consider showing your support by giving it a star.** ⭐
+
+_"Star" button located at the top-right of the page, near the repository name._
+
+Your star isn’t just a digital icon—it’s a beacon that tells us we're on the right path, that our efforts are appreciated, and that this work matters. It fuels our passion and drives us to keep improving, building, and sharing.
+
+If you believe in what we’re doing, **please share this project with others who might find it helpful.** Together, we can create something truly meaningful.
+
+Thank you for being part of this journey. Your support means the world to us. 🌍💖
+
+---
+
+## Installation - Step-by-Step Guide 🪜
+
+[Installation instructions here]
+
+- **Step 1:**
+- **Step 2:**
+- **Step 3:**
+- **Step 4:**
+- **Step 5:**
+
+## Usage
+
+- [purpose heading]
+  [Demonstration here]
 
 ```bash
-npx finally -b dist -r /public_html -i test/** devfiles/** --ftpVerbose -h ftp.example.com -p 21 -u exampleuser --password examplepass --secure
+demo
 ```
 
-### Example
+## In-Action 🤺
 
-Here’s an example of how to use Finally.js to deploy files:
+[video] or [gif] or [image]
 
-1. **Setup a Sample Project**: Create a sample project directory and add some files to a `dist` folder.
+## License ©️
 
-   ```bash
-   mkdir sample-project
-   cd sample-project
-   mkdir dist
-   echo "Hello World" > dist/index.html
-   ```
+This project is licensed under the [Apache License 2.0 or GNU General Public License v3.0 or MIT](LICENSE).
 
-2. **Create Configuration File (optional⚠️)**: In the `sample-project` directory, create a `finally.c.json` file with your FTP server details.
+## Contributing to Our Project 🤝
 
-   ```json
-   {
-     "host": "FTPSERV_ENV_VAR",
-     "port": 21,
-     "user": "FTPUSER_ENV_VAR",
-     "password": "FTPPASS_ENV_VAR",
-     "secure": false
-   }
-   ```
+We’re always open to contributions and fixing issues—your help makes this project better for everyone.
 
-3. **Deploy Files**: Run the deployment command.
+If you encounter any errors or issues, please don’t hesitate to [raise an issue](../../issues/new). This ensures we can address problems quickly and improve the project.
 
-   ```bash
-   npx finally -b dist -r /public_html
-   ```
+For those who want to contribute, we kindly ask you to review our [Contribution Guidelines](CONTRIBUTING) before getting started. This helps ensure that all contributions align with the project's direction and comply with our existing [license](LICENSE).
 
-### GitHub Actions Integration
+We deeply appreciate everyone who contributes or raises issues—your efforts are crucial to building a stronger community. Together, we can create something truly impactful.
 
-To use Finally.js with GitHub Actions for continuous deployment, you can add the following workflow file to your repository:
+Thank you for being part of this journey!
 
-```yaml
-name: FTP Deployment
+## Website 🌐
 
-on:
-  push:
-    branches:
-      - main
+<a id="url" href="https://darsan.in">[https://darsan.in]</a>
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+## Contact Information
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4.1.7
+For any questions, please reach out via hello@darsan.in or [LinkedIn](https://www.linkedin.com/in/darsan-in/).
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4.0.3
-        with:
-          node-version: "22"
+## Credits 🙏🏻
 
-      - name: Install Finally
-        run: npm install finally.js
+[credits to lib maintainers/creators]
 
-      - name: Deploy to FTP
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        run: finally --basePath dist --remoteBasePath /public_html -h $FTP_SERVER -u $FTP_USERNAME --password $FTP_PASSWORD --port 21
-```
+---
 
-In this example, make sure to add your FTP server credentials as secrets in your GitHub repository settings.
+<p align="center">
 
-### License
+<span>
+<a href="https://www.linkedin.com/in/darsan-in/"><img width='45px' height='45px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/linkedin.png" alt="Darsan at Linkedin"></a>
+</span>
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+<span>
+  <img width='20px' height='20px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/gap.png" alt="place holder image">
+</span>
 
-### Contributing
+<span>
+<a href="https://www.youtube.com/@darsan-in"><img width='45px' height='45px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/youtube.png" alt="Darsan at Youtube"></a>
+</span>
 
-We welcome contributions to Finally.js! If you find a bug or have a feature request, please create an issue or submit a pull request on [GitHub](https://github.com/iamspdarsan/finally.js).
+<span>
+  <img width='20px' height='20px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/gap.png" alt="place holder image">
+</span>
 
-### Contact
+<span>
+<a href="https://www.facebook.com/darsan.in/"><img width='45px' height='45px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/facebook.png" alt="Darsan at Facebook"></a>
+</span>
 
-For any questions or inquiries, please contact the author:
+<span>
+  <img width='20px' height='20px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/gap.png" alt="place holder image">
+</span>
 
-**Darsan**
+<span>
+<a href="https://www.npmjs.com/~darsan.in"><img width='45px' height='45px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/npm.png" alt="Darsan at NPM"></a>
+</span>
 
-- Email: [hello@darsan.in](mailto:hello@darsan.in)
-- GitHub: [iamspdarsan](https://github.com/iamspdarsan)
+<span>
+  <img width='20px' height='20px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/gap.png" alt="place holder image">
+</span>
+
+<span>
+<a href="https://github.com/darsan-in"><img width='45px' height='45px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/github.png" alt="Darsan at Github"></a>
+</span>
+
+<span>
+  <img width='20px' height='20px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/gap.png" alt="place holder image">
+</span>
+
+<span>
+<a href="https://huggingface.co/darsan"><img width='45px' height='45px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/hf.png" alt="Darsan at Huggingface"></a>
+</span>
+
+<span>
+  <img width='20px' height='20px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/gap.png" alt="place holder image">
+</span>
+
+<span>
+<a href="https://www.reddit.com/user/iamspdarsan/"><img width='45px' height='45px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/reddit.png" alt="Darsan at Reddit"></a>
+</span>
+
+<span>
+  <img width='20px' height='20px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/gap.png" alt="place holder image">
+</span>
+
+<span>
+<a href="https://darsan.in/"><img width='45px' height='45px' src="https://raw.githubusercontent.com/darsan-in/.github/main/brand/footer-icons/website.png" alt="Darsan Website"></a>
+</span>
+
+<p>
+
+---
+
+#### Topics
+
+<ul id="keywords">
+
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+
+</ul>
