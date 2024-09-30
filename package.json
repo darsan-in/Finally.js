@@ -1,73 +1,78 @@
 {
-	"name": "finally.js",
-	"displayName": "Finally.js",
-	"version": "1.0.0",
-	"description": "Finally.js is a simple and efficient Node.js tool for deploying website files to an FTP server. It collects source files from a specified directory and pushes them to an FTP server using environment variable-based authentication for secure credential management. Additionally, it can be seamlessly integrated with GitHub Actions for automated deployment workflows.",
-	"main": "./dist/finally.js",
-	"types": "./dist/types/finally.d.ts",
-	"exports": {
-		"import": "./dist/finally.js",
-		"require": "./dist/finally.js",
-		"types": "./dist/types/finally.d.ts"
-	},
-	"files": [
-		"dist"
-	],
-	"preferGlobal": true,
-	"bin": {
-		"finally": "./dist/bin/cli.js"
-	},
-	"repository": {
-		"url": "https://github.com/iamspdarsan/finally.js"
-	},
-	"bugs": {
-		"url": "https://github.com/iamspdarsan/finally.js/issues"
-	},
-	"homepage": "https://github.com/iamspdarsan/finally.js#readme",
-	"author": "DARSAN <hello@darsan.in>",
-	"maintainers": [
-		"DARSAN <hello@darsan.in>"
-	],
-	"license": "MIT",
-	"private": false,
-	"scripts": {
-		"dev": "cls && rimraf dist && tsc -p tscdev.json && ncp ./finally.c.json ./dist/finally.c.json",
-		"dr": "yarn dev && yarn rp",
-		"rp": "node ./dist/finally.js",
-		"test": "jest",
-		"build": "cls && rimraf dist && tsc -p tsconfig.json && ncp ./finally.c.json ./dist/finally.c.json",
-		"clean": "cls && rimraf dist",
-		"deploy": "yarn build && npm publish && git push"
-	},
-	"keywords": [
-		"Node.js",
-		"FTP deployment",
-		"FTP upload",
-		"Automated deployment",
-		"Environment variable authentication",
-		"Website deployment",
-		"Secure FTP transfer",
-		"Local directory upload",
-		"GitHub Actions integration",
-		"Continuous deployment",
-		"CI/CD",
-		"Node FTP client",
-		"FTP script",
-		"Deployment tool",
-		"Web deployment"
-	],
-	"dependencies": {
-		"basic-ftp": "5.0.5",
-		"cli-progress": "3.12.0",
-		"commander": "12.1.0",
-		"glob": "11.0.0"
-	},
-	"devDependencies": {
-		"@types/cli-progress": "^3.11.6",
-		"@types/node": "latest",
-		"ncp": "latest",
-		"rimraf": "latest",
-		"ts-node": "latest",
-		"typescript": "latest"
-	}
+  "name": "finally.js",
+  "displayName": "Finally.js",
+  "version": "1.0.1",
+  "description": "Finally.js is a Node.js tool for seamlessly deploying website files to an FTP server. It automates the process of collecting files from a specified directory and ensures secure authentication through environment variables. Ideal for developers looking to streamline their deployment process, Finally.js can be effortlessly integrated with GitHub Actions for automated deployments.",
+  "main": "./dist/finally.js",
+  "types": "./dist/types/finally.d.ts",
+  "exports": {
+    "import": "./dist/finally.js",
+    "require": "./dist/finally.js",
+    "types": "./dist/types/finally.d.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "finally": "./dist/bin/cli.js"
+  },
+  "repository": {
+    "url": "https://github.com/iamspdarsan/finally.js"
+  },
+  "bugs": {
+    "url": "https://github.com/iamspdarsan/finally.js/issues"
+  },
+  "homepage": "https://www.npmjs.com/package/finally.js",
+  "author": "DARSAN <hello@darsan.in>",
+  "maintainers": [
+    "DARSAN <hello@darsan.in>"
+  ],
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "cls && rimraf dist && tsc -p tscdev.json && ncp ./finally.c.json ./dist/finally.c.json",
+    "dr": "yarn dev && yarn rp",
+    "rp": "node ./dist/finally.js",
+    "test": "jest",
+    "build": "cls && rimraf dist && tsc -p tsconfig.json && ncp ./finally.c.json ./dist/finally.c.json",
+    "clean": "cls && rimraf dist",
+    "deploy": "yarn build && npm publish && git push"
+  },
+  "keywords": [
+    "ftp deployment",
+    "node.js deployment tool",
+    "automated website deployment",
+    "github actions integration",
+    "ftp server",
+    "secure authentication",
+    "ci/cd pipeline",
+    "web development",
+    "ftp upload",
+    "environment variables",
+    "node.js",
+    "website deployment",
+    "automated deployment",
+    "ftp automation",
+    "ftp tool",
+    "deploy website",
+    "file transfer",
+    "web hosting",
+    "ftp integration",
+    "ftp client"
+  ],
+  "dependencies": {
+    "basic-ftp": "5.0.5",
+    "cli-progress": "3.12.0",
+    "commander": "12.1.0",
+    "glob": "11.0.0"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/node": "latest",
+    "ncp": "latest",
+    "rimraf": "latest",
+    "ts-node": "latest",
+    "typescript": "latest"
+  }
 }
